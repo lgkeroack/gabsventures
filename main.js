@@ -26,7 +26,6 @@
 
   // --- Nav Scroll Effect ---
   const nav = document.querySelector('.nav');
-  let lastScroll = 0;
   let ticking = false;
 
   function updateNav() {
@@ -40,42 +39,6 @@
       ticking = true;
     }
   }, { passive: true });
-
-
-  // --- Project Filtering ---
-  const filterButtons = document.querySelectorAll('.filter');
-  const cards = document.querySelectorAll('.card');
-
-  filterButtons.forEach((btn) => {
-    btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter;
-
-      // Update active button
-      document.querySelector('.filter.active').classList.remove('active');
-      btn.classList.add('active');
-
-      // Filter cards
-      cards.forEach((card) => {
-        const match = filter === 'all' || card.dataset.category === filter;
-
-        if (match && card.classList.contains('hidden')) {
-          // Show: remove hidden, set initial state, animate in
-          card.classList.remove('hidden');
-          card.classList.add('hiding');
-          // Force reflow so the transition fires
-          card.offsetHeight;
-          card.classList.remove('hiding');
-        } else if (!match && !card.classList.contains('hidden')) {
-          // Hide: animate out, then display none
-          card.classList.add('hiding');
-          setTimeout(() => {
-            card.classList.add('hidden');
-            card.classList.remove('hiding');
-          }, 300);
-        }
-      });
-    });
-  });
 
 
   // --- Smooth Scroll for Nav Links (enhancement over CSS) ---
