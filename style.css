@@ -13,7 +13,7 @@
   --accent:       #c8956a;
   --border:       #222222;
 
-  --font-body:  Georgia, 'Iowan Old Style', 'Palatino Linotype', 'Times New Roman', serif;
+  --font-body:  'EB Garamond', Georgia, 'Times New Roman', serif;
   --font-mono:  ui-monospace, 'SF Mono', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
 
   --container:  1100px;
