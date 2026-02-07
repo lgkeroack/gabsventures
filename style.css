@@ -515,6 +515,16 @@ body::after {
   letter-spacing: 0.02em;
 }
 
+.footer a {
+  color: var(--text-dim);
+  margin-left: 1rem;
+  transition: color 0.2s ease;
+}
+
+.footer a:hover {
+  color: var(--accent);
+}
+
 
 /* --- Animations --- */
 @keyframes fadeUp {

@@ -1,0 +1,204 @@
+/* =========================================
+   Privacy Policy — Page-specific Styles
+   ========================================= */
+
+.policy {
+  padding-top: 6rem;
+  padding-bottom: var(--section-gap);
+}
+
+.policy-header {
+  margin-bottom: 3.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.policy-header h1 {
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--text);
+  margin-top: 0.5rem;
+}
+
+.policy-meta {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  line-height: 1.8;
+  margin-top: 1.25rem;
+  letter-spacing: 0.01em;
+}
+
+/* --- Sections --- */
+.policy section {
+  margin-bottom: 3rem;
+}
+
+.policy h2 {
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 1rem;
+  letter-spacing: -0.01em;
+}
+
+.policy h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.policy h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.75rem;
+}
+
+.policy p {
+  color: var(--text-mid);
+  line-height: 1.75;
+  margin-bottom: 0.75rem;
+}
+
+.policy a {
+  color: var(--accent);
+}
+
+.policy a:hover {
+  text-decoration: underline;
+}
+
+.policy address {
+  font-style: normal;
+  color: var(--text-mid);
+  line-height: 1.8;
+  margin: 1rem 0;
+}
+
+/* --- Lists --- */
+.policy ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.75rem 0;
+}
+
+.policy ul li {
+  position: relative;
+  padding-left: 1.25rem;
+  color: var(--text-mid);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+.policy ul li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: var(--text-dim);
+}
+
+/* Check list (core commitment) */
+.check-list li::before {
+  content: '\2713';
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Cross list (we do not) */
+.cross-list li::before {
+  content: '\2717';
+  color: #a05a5a;
+  font-weight: 700;
+}
+
+/* --- Highlight blocks --- */
+.policy-block {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  background: var(--bg-raised);
+}
+
+.policy-block h4 {
+  margin-top: 0;
+}
+
+/* --- Commitment section --- */
+.policy-commitment {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* --- Table --- */
+.policy-table-wrap {
+  overflow-x: auto;
+  margin: 1rem 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.policy-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.policy-table th,
+.policy-table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-mid);
+  line-height: 1.5;
+}
+
+.policy-table th {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  border-bottom: 1px solid var(--accent);
+}
+
+.policy-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* --- Summary --- */
+.policy-summary {
+  border-left: 2px solid var(--accent);
+  padding-left: 1.5rem;
+}
+
+.policy-summary p {
+  color: var(--text);
+  font-size: 1.0625rem;
+  font-style: italic;
+}
+
+/* --- Disclaimer --- */
+.policy-disclaimer {
+  font-size: 0.8125rem;
+  color: var(--text-dim);
+  font-style: italic;
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--border);
+}
+
+/* --- Footer link style --- */
+.footer a {
+  color: var(--accent);
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
