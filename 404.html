@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 — Not Found</title>
+  <style>
+    :root {
+      --bg: #0a0a0a;
+      --text: #ece8e4;
+      --text-mid: #9b9590;
+      --text-dim: #5c5854;
+      --accent: #c8956a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+      -webkit-font-smoothing: antialiased;
+    }
+    h1 {
+      font-size: clamp(3rem, 10vw, 6rem);
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+    p {
+      color: var(--text-mid);
+      margin-top: 1rem;
+      font-size: 1.0625rem;
+    }
+    a {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+    }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <div>
+    <h1>404</h1>
+    <p>Nothing here. Probably never was.</p>
+    <a href="/">Back home</a>
+  </div>
+</body>
+</html>

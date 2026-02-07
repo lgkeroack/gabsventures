@@ -7,12 +7,10 @@
 :root {
   --bg:           #0a0a0a;
   --bg-raised:    #111111;
-  --bg-elevated:  #1a1a1a;
   --text:         #ece8e4;
   --text-mid:     #9b9590;
   --text-dim:     #5c5854;
   --accent:       #c8956a;
-  --accent-hover: #daa882;
   --border:       #222222;
 
   --font-sans:  -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -255,36 +253,6 @@ body::after {
 }
 
 
-/* --- Filters --- */
-.filters {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-  margin-bottom: 2rem;
-}
-
-.filter {
-  padding: 0.5rem 1.125rem;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  border-radius: 100px;
-  border: 1px solid var(--border);
-  color: var(--text-mid);
-  transition: all 0.25s ease;
-}
-
-.filter:hover {
-  border-color: var(--text-dim);
-  color: var(--text);
-}
-
-.filter.active {
-  background: var(--text);
-  color: var(--bg);
-  border-color: var(--text);
-}
-
-
 /* --- Project Grid --- */
 .grid {
   display: grid;
@@ -298,7 +266,8 @@ body::after {
   border: 1px solid var(--border);
   border-radius: 10px;
   overflow: hidden;
-  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease, opacity 0.3s ease;
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .card:hover {
@@ -582,20 +551,6 @@ body::after {
 .card.reveal:nth-child(2) { transition-delay: 0.08s; }
 .card.reveal:nth-child(3) { transition-delay: 0.16s; }
 .card.reveal:nth-child(4) { transition-delay: 0.24s; }
-.card.reveal:nth-child(5) { transition-delay: 0.3s; }
-.card.reveal:nth-child(6) { transition-delay: 0.36s; }
-.card.reveal:nth-child(7) { transition-delay: 0.4s; }
-.card.reveal:nth-child(8) { transition-delay: 0.44s; }
-
-/* Card filter transition */
-.card.hiding {
-  opacity: 0;
-  transform: translateY(10px) scale(0.97);
-}
-
-.card.hidden {
-  display: none;
-}
 
 
 /* --- Reduced Motion --- */
@@ -617,6 +572,10 @@ body::after {
 
 /* --- Responsive --- */
 @media (max-width: 768px) {
+  body::after {
+    display: none;
+  }
+
   .grid {
     grid-template-columns: 1fr;
   }
