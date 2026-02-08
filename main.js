@@ -41,6 +41,22 @@
   }, { passive: true });
 
 
+  // --- Newsletter Banner ---
+  const banner = document.getElementById('banner');
+  const bannerClose = document.getElementById('banner-close');
+
+  if (banner && !localStorage.getItem('banner-dismissed')) {
+    banner.hidden = false;
+  }
+
+  if (bannerClose) {
+    bannerClose.addEventListener('click', () => {
+      banner.hidden = true;
+      localStorage.setItem('banner-dismissed', '1');
+    });
+  }
+
+
   // --- Smooth Scroll for Nav Links (enhancement over CSS) ---
   document.querySelectorAll('.nav-links a[href^="#"]').forEach((link) => {
     link.addEventListener('click', (e) => {
