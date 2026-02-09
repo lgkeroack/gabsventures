@@ -5,13 +5,13 @@
 
 /* --- Design Tokens --- */
 :root {
-  --bg:           #0a0a0a;
-  --bg-raised:    #111111;
-  --text:         #ece8e4;
-  --text-mid:     #9b9590;
-  --text-dim:     #5c5854;
+  --bg:           #0e0e0e;
+  --bg-raised:    #161616;
+  --text:         #f0ece8;
+  --text-mid:     #b0aaa4;
+  --text-dim:     #736e69;
   --accent:       #c8956a;
-  --border:       #222222;
+  --border:       #2a2a2a;
 
   --font-body:  'EB Garamond', Georgia, 'Times New Roman', serif;
   --font-mono:  ui-monospace, 'SF Mono', 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, monospace;
@@ -20,6 +20,51 @@
   --narrow:     640px;
   --gutter:     clamp(1.25rem, 4vw, 3rem);
   --section-gap: clamp(5rem, 12vw, 9rem);
+}
+
+
+/* --- Light Mode --- */
+body.light-mode {
+  --bg:           #f5f2ee;
+  --bg-raised:    #ffffff;
+  --text:         #1a1816;
+  --text-mid:     #5c5854;
+  --text-dim:     #9b9590;
+  --accent:       #a0714d;
+  --border:       #ddd8d2;
+}
+
+body.light-mode .nav.scrolled {
+  background: rgba(245, 242, 238, 0.85);
+}
+
+body.light-mode .card:hover {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+}
+
+body.light-mode::after {
+  opacity: 0.012;
+}
+
+body.light-mode ::selection {
+  color: #f5f2ee;
+}
+
+
+/* --- Theme Toggle --- */
+.theme-toggle {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  color: var(--text-dim);
+  letter-spacing: 0.01em;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  color: var(--text);
 }
 
 
@@ -143,7 +188,7 @@ body::after {
 }
 
 .nav.scrolled {
-  background: rgba(10, 10, 10, 0.85);
+  background: rgba(14, 14, 14, 0.85);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   box-shadow: 0 1px 0 var(--border);
