@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -m http.server:*)",
+      "WebFetch(domain:api.open-meteo.com)"
+    ]
+  }
+}
