@@ -161,12 +161,29 @@
   }
 
   function updateWeather() {
+    var cached = localStorage.getItem(WEATHER_KEY);
+    if (cached) {
+      try {
+        var parsed = JSON.parse(cached);
+        if (Date.now() - parsed.ts < WEATHER_TTL) {
+          applyWeather(parsed.condition, parsed.sunrise, parsed.sunset);
+          return;
+        }
+      } catch (e) { /* ignore */ }
+    }
+
     fetch('https://api.open-meteo.com/v1/forecast?latitude=49.7016&longitude=-123.1558&current=weather_code&daily=sunrise,sunset&forecast_days=1&timezone=America/Vancouver')
       .then(function (res) { return res.json(); })
       .then(function (json) {
         var condition = resolveCondition(json.current.weather_code);
         var sunrise = json.daily.sunrise[0];
         var sunset = json.daily.sunset[0];
+        localStorage.setItem(WEATHER_KEY, JSON.stringify({
+          condition: condition,
+          sunrise: sunrise,
+          sunset: sunset,
+          ts: Date.now()
+        }));
         applyWeather(condition, sunrise, sunset);
       })
       .catch(function () { /* fail silently */ });
@@ -840,6 +857,7 @@
     }
 
     calculatePositions();
+    setInterval(calculatePositions, 60000);
 
     var frameCount = 0;
 
