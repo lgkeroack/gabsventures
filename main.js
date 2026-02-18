@@ -119,9 +119,6 @@
 
 
   // --- Squamish Weather Service ---
-  var WEATHER_KEY = 'squamish-weather';
-  var WEATHER_TTL = 4 * 60 * 60 * 1000;
-
   function resolveCondition(code) {
     if (code >= 71 && code <= 77 || code === 85 || code === 86) return 'snow';
     if (code >= 51 && code <= 67 || code >= 80 && code <= 82 || code >= 95) return 'rain';
