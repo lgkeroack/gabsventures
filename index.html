@@ -16,7 +16,7 @@
 <body>
 
   <a href="#main" class="skip-link">Skip to content</a>
-  <div class="top-accent" aria-hidden="true"></div>
+
 
   <nav class="nav" role="navigation" aria-label="Main">
     <div class="nav-inner">
@@ -26,7 +26,7 @@
         <a href="#now">Now</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="https://js-dos.com/DOOM/" target="_blank" rel="noopener">Consider the following</a>
+        <a href="https://dos.zone/microsoft-3d-pinball-space-cadet/" target="_blank" rel="noopener" class="consider-link">Consider the following</a>
         <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">light</button>
       </div>
     </div>
@@ -35,7 +35,7 @@
   <div class="banner" id="banner" hidden>
     <div class="banner-inner">
       <p class="banner-text">A quarterly newsletter as unintrusive as this banner.</p>
-      <form class="banner-form" action="https://buttondown.com/api/emails/embed-subscribe/gabsventures" method="post" target="_blank">
+      <form class="banner-form" id="banner-form">
         <input type="email" name="email" placeholder="your@email.com" required aria-label="Email address">
         <button type="submit">Subscribe</button>
       </form>
@@ -62,22 +62,23 @@
         <div class="grid">
 
           <article class="card reveal">
-            <div class="card-image" style="--hue: 205">
-              <img src="images/airplan.PNG" alt="Airplan – Canadian airspace visualization tool" loading="lazy">
-            </div>
             <div class="card-body">
-              <h3><a href="https://airplan-sigma.vercel.app" target="_blank" rel="noopener">Airplan</a></h3>
-              <p>A Canadian Airspace visualization and flight planning tool. It allows for easy understanding of layered airspaces, and ensures you only enter restricted zones on purpose.</p>
+              <h3><a href="https://liftseeker.vercel.app" target="_blank" rel="noopener">Liftseeker</a></h3>
+              <p>Where should we fly today?</p>
             </div>
           </article>
 
           <article class="card reveal">
-            <div class="card-image" style="--hue: 35">
-              <img src="images/gabsventures.PNG" alt="Gab's Ventures portfolio website" loading="lazy">
+            <div class="card-body">
+              <h3><a href="https://airplan-sigma.vercel.app" target="_blank" rel="noopener">Airplan</a></h3>
+              <p>Will I get in trouble for flying today?</p>
             </div>
+          </article>
+
+          <article class="card reveal">
             <div class="card-body">
               <h3><a href="https://github.com/lgkeroack/gabsventures" target="_blank" rel="noopener">This Site</a></h3>
-              <p>The page you're reading. Zero dependencies, no build step, 25KB total. Pure HTML, CSS, and vanilla JS. System fonts, fluid typography, scroll animations, film grain texture.</p>
+              <p>You're already here.</p>
             </div>
           </article>
 
@@ -94,22 +95,36 @@
           <div class="now-item reveal">
             <span class="now-dot" aria-hidden="true"></span>
             <div>
-              <strong>Mapping Canadian airspace in 3D</strong>
-              <p>Adding terrain profiles, route planning, and volumetric airspace rendering to Airplan. Making controlled airspace intuitive for pilots.</p>
+              <strong>Having a 99 day</strong>
+              <p>Will I regret my life choices on the highway today?</p>
             </div>
           </div>
           <div class="now-item reveal">
             <span class="now-dot" aria-hidden="true"></span>
             <div>
-              <strong>Building the exit ramp from social media</strong>
-              <p>Unsocial: a calm, deliberate tool to back up your digital life and leave platforms behind. OAuth, job queues, archive pipelines.</p>
+              <strong>Unsocializing</strong>
+              <p>Be a quitter.</p>
             </div>
           </div>
           <div class="now-item reveal">
             <span class="now-dot" aria-hidden="true"></span>
             <div>
-              <strong>Designing LexVault from scratch</strong>
-              <p>Comprehensive system specs for a Canadian legal document platform. Architecture, security model, audit trails, the whole blueprint.</p>
+              <strong>Reading policy</strong>
+              <p>Making law a bit less opaque.</p>
+            </div>
+          </div>
+          <div class="now-item reveal">
+            <span class="now-dot" aria-hidden="true"></span>
+            <div>
+              <strong>20g Slugger</strong>
+              <p>Pow.</p>
+            </div>
+          </div>
+          <div class="now-item reveal">
+            <span class="now-dot" aria-hidden="true"></span>
+            <div>
+              <strong>The Gin Sasquatch Pod</strong>
+              <p>Surely I can sow.</p>
             </div>
           </div>
         </div>
@@ -158,6 +173,6 @@
     </div>
   </footer>
 
-  <script src="main.js"></script>
+  <script src="main.js?v=8"></script>
 </body>
 </html>

@@ -47,12 +47,60 @@
 
   if (banner && !localStorage.getItem('banner-dismissed')) {
     banner.hidden = false;
+    banner.style.top = nav.offsetHeight + 'px';
+  }
+
+  function dismissBanner() {
+    banner.classList.add('banner-dismiss');
+    banner.addEventListener('transitionend', function () {
+      banner.hidden = true;
+    }, { once: true });
+    localStorage.setItem('banner-dismissed', '1');
   }
 
   if (bannerClose) {
-    bannerClose.addEventListener('click', function () {
-      banner.hidden = true;
-      localStorage.setItem('banner-dismissed', '1');
+    bannerClose.addEventListener('click', dismissBanner);
+  }
+
+  var bannerForm = document.getElementById('banner-form');
+  if (bannerForm) {
+    bannerForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var email = bannerForm.querySelector('input[name="email"]').value;
+      var btn = bannerForm.querySelector('button');
+      btn.disabled = true;
+      btn.textContent = '...';
+
+      fetch('/api/subscribe', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: email })
+      }).then(function (res) {
+        if (!res.ok) throw new Error('fail');
+      }).then(function () {
+        var bannerText = document.querySelector('.banner-text');
+        bannerForm.style.display = 'none';
+        var closeBtn = document.getElementById('banner-close');
+        if (closeBtn) closeBtn.style.display = 'none';
+        bannerText.textContent = 'You\u2019re in. Welcome to Gab\u2019s Ventures.';
+        setTimeout(dismissBanner, 5000);
+      }).catch(function () {
+        var bannerText = document.querySelector('.banner-text');
+        bannerText.style.transition = 'opacity 0.3s ease';
+        bannerText.style.opacity = '0';
+        setTimeout(function () {
+          bannerText.textContent = 'Hmm, that didn\u2019t work. Try again?';
+          bannerText.style.opacity = '1';
+        }, 300);
+        btn.style.transition = 'opacity 0.3s ease';
+        btn.style.opacity = '0';
+        setTimeout(function () {
+          btn.disabled = false;
+          btn.textContent = 'Retry';
+          btn.style.opacity = '1';
+        }, 300);
+        bannerForm.querySelector('input[name="email"]').focus();
+      });
     });
   }
 
