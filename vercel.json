@@ -1,4 +1,11 @@
 {
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "has": [{ "type": "host", "value": "apps.gabs.ventures" }],
+      "destination": "/apps/:path*"
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
