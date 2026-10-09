@@ -545,60 +545,6 @@ body::after {
 }
 
 
-/* --- Now Section --- */
-.now-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.now-item {
-  display: flex;
-  gap: 1rem;
-  align-items: flex-start;
-}
-
-.now-dot {
-  flex-shrink: 0;
-  width: 8px;
-  height: 8px;
-  background: var(--accent);
-  border-radius: 50%;
-  margin-top: 0.55rem;
-  position: relative;
-}
-
-.now-dot::after {
-  content: '';
-  position: absolute;
-  inset: -3px;
-  border-radius: 50%;
-  border: 1px solid var(--accent);
-  opacity: 0.3;
-}
-
-.now-item strong {
-  font-size: 1rem;
-  font-weight: 600;
-  color: var(--text);
-  display: block;
-}
-
-.now-item p {
-  font-size: 0.9375rem;
-  color: var(--text-mid);
-  margin-top: 0.25rem;
-}
-
-.updated-note {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--text-dim);
-  margin-top: 2.5rem;
-  letter-spacing: 0.02em;
-}
-
-
 /* --- About --- */
 .about-content {
   display: flex;
