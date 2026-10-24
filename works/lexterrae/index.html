@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lex Terrae — gabriel k&eacute;roack</title>
+  <meta name="description" content="Lex Terrae: Canadian law sorted by where it applies. Name a place and see every by-law, statute and regulation that covers it.">
+  <meta name="theme-color" content="#0e0e0e">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%97%86</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/work.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+
+  <nav class="nav" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home">gk</a>
+      <div class="nav-links">
+        <a href="https://apps.gabs.ventures">The Apps</a>
+        <a href="/#works">Works</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://dos.zone/microsoft-3d-pinball-space-cadet/" target="_blank" rel="noopener" class="consider-link">Consider the following</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">light</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="work">
+    <div class="container">
+
+      <a href="/#works" class="work-back">&larr; All works</a>
+
+      <header>
+        <span class="section-label">Works</span>
+        <h1 class="work-title">Lex Terrae</h1>
+        <p class="work-tagline">Which laws apply here?</p>
+        <p class="work-intro">A library of Canadian law, sorted by where it applies. Name a place and Lex Terrae lists every document that covers it, from the local by-law up to federal statute.</p>
+
+        <div class="work-actions">
+          <a href="https://lexterrae.lgkeroack.workers.dev" class="work-button primary" target="_blank" rel="noopener">Open Lex Terrae &nearr;</a>
+          <a href="https://github.com/lgkeroack/lexterrae" class="work-button" target="_blank" rel="noopener">Source on GitHub &nearr;</a>
+        </div>
+
+        <dl class="work-facts">
+          <div>
+            <dt>Year</dt>
+            <dd>2026</dd>
+          </div>
+          <div>
+            <dt>Type</dt>
+            <dd>Web app</dd>
+          </div>
+          <div>
+            <dt>Built with</dt>
+            <dd>React, Cloudflare Workers, Neon Postgres</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Live</dd>
+          </div>
+        </dl>
+      </header>
+
+      <figure class="shot reveal">
+        <picture>
+          <source media="(max-width: 768px)" srcset="/images/works/lexterrae/results-narrow.webp" width="1100" height="1140">
+          <img src="/images/works/lexterrae/results.webp" width="2000" height="1094" alt="Lex Terrae showing what applies in Squamish, British Columbia: a panel for downloading an AI reference package, a search box, and the Squamish Building Bylaw listed under the district municipality.">
+        </picture>
+        <figcaption>Everything that applies in Squamish, grouped from the most local jurisdiction up.</figcaption>
+      </figure>
+
+      <section class="work-section work-prose" aria-labelledby="what-heading">
+        <span class="section-label">What it is</span>
+        <h2 id="what-heading" class="section-title reveal">One place for every layer of law</h2>
+        <p>Canadian law comes in layers. Parliament makes federal law, the provinces and territories make their own, and regional districts, municipalities and First Nations add by-laws on top. Each government publishes on its own website, in its own way.</p>
+        <p>Lex Terrae puts those layers in one place and organizes them by geography. Pick a place and you see its own documents, then those of every jurisdiction that contains it: Squamish, then the Squamish-Lillooet Regional District, then British Columbia, then Canada.</p>
+      </section>
+
+      <section class="work-section" aria-labelledby="why-heading">
+        <span class="section-label">Why it&rsquo;s useful</span>
+        <h2 id="why-heading" class="section-title reveal">Start from where you are</h2>
+        <ul class="work-points">
+          <li class="reveal">
+            <h3>The place, not the government</h3>
+            <p>Most people know where they are, not which level of government regulates what. One search answers the question for every jurisdiction that matters there.</p>
+          </li>
+          <li class="reveal">
+            <h3>Nesting handled for you</h3>
+            <p>A British Columbia statute applies in Squamish; a Squamish by-law doesn&rsquo;t apply in the rest of the province. Each document is tagged once, where it belongs, and shows up everywhere inside that jurisdiction.</p>
+          </li>
+          <li class="reveal">
+            <h3>Ready to hand to an AI</h3>
+            <p>One button bundles every applicable document into a single reference file for Claude, ChatGPT or Gemini, with an estimate of whether it&rsquo;s small enough to read in full. The assistant answers from the actual text, not from memory.</p>
+          </li>
+          <li class="reveal">
+            <h3>Your location stays yours</h3>
+            <p>&ldquo;Use my location&rdquo; works out your jurisdiction inside the browser from the map boundaries. Only the jurisdiction is sent to the server, never your coordinates.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="work-section" aria-labelledby="how-heading">
+        <span class="section-label">How it works</span>
+        <h2 id="how-heading" class="section-title reveal">From a map to a reading list</h2>
+        <ol class="work-steps">
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">01</span>
+              <h3>Find a place</h3>
+              <p>Search about 4,800 municipalities, regional districts, provinces, territories and First Nations, or let the browser find you. The list is built from Statistics Canada&rsquo;s census boundaries.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/lexterrae/search.webp" width="1716" height="845" loading="lazy" alt="The Where are you? screen with a Use my location button and a search for Squamish returning the District of Squamish and the Squamish-Lillooet Regional District.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">02</span>
+              <h3>Tag documents on the map</h3>
+              <p>Behind the scenes, editors upload a document (PDF, Word, Excel, plain text and more) and mark where it applies on a map of Canada. Federal law covers the whole country, and Quebec is set apart as the civil-law province. Anyone can look things up; only approved editors can add to the library.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/lexterrae/map.webp" width="1500" height="1666" loading="lazy" alt="The editor's jurisdiction map of Canada with Federal and all of British Columbia selected, Quebec shaded as civil law, and a legend below.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">03</span>
+              <h3>Drill down to the town</h3>
+              <p>Zoom into a province to tag a single region, municipality or Indigenous land. British Columbia alone has 630 of them. If one is missing, an editor can add it.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/lexterrae/province.webp" width="1460" height="1280" loading="lazy" alt="A zoomed-in map of British Columbia showing municipal and Indigenous boundaries, with Squamish labelled as selected.">
+            </figure>
+          </li>
+        </ol>
+      </section>
+
+      <section class="work-section" aria-labelledby="stack-heading">
+        <span class="section-label">Under the hood</span>
+        <h2 id="stack-heading" class="section-title reveal">How it&rsquo;s built</h2>
+        <dl class="work-stack reveal">
+          <dt>Front end</dt>
+          <dd>React and TypeScript, with D3 and TopoJSON drawing the maps</dd>
+          <dt>Back end</dt>
+          <dd>Hono on a single Cloudflare Worker that also serves the app</dd>
+          <dt>Data</dt>
+          <dd>Neon Postgres, with uploaded files in Cloudflare R2</dd>
+          <dt>Boundaries</dt>
+          <dd>Statistics Canada census subdivisions, under the Open Government Licence &ndash; Canada</dd>
+        </dl>
+      </section>
+
+      <div class="work-end">
+        <a href="/#works">&larr; All works</a>
+        <a href="https://lexterrae.lgkeroack.workers.dev" target="_blank" rel="noopener">Open Lex Terrae &nearr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by hand. <a href="/privacy.html">Privacy</a> <span id="weather-status"></span></p>
+      <p class="footer-legal">&copy; Gab's Ventures Limit&eacute;e. All rights reserved. This website and all associated works, content, and intellectual property are owned, protected, and operated by Gab's Ventures Limit&eacute;e. Unauthorized use, reproduction, or distribution of any materials on this site is strictly prohibited without prior written consent.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=9"></script>
+</body>
+</html>
