@@ -1,0 +1,303 @@
+/* =========================================
+   Work — Project one-pager styles
+   Shared by every page under /works/.
+   ========================================= */
+
+.work {
+  padding-top: 7rem;
+  padding-bottom: var(--section-gap);
+}
+
+.work-back {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.02em;
+  color: var(--text-dim);
+  margin-bottom: 2.5rem;
+  transition: color 0.2s ease;
+}
+
+.work-back:hover {
+  color: var(--accent);
+}
+
+
+/* --- Header --- */
+.work-title {
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+  color: var(--text);
+}
+
+.work-tagline {
+  font-size: clamp(1.25rem, 3vw, 1.75rem);
+  color: var(--text-mid);
+  margin-top: 0.75rem;
+}
+
+.work-intro {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text);
+  max-width: 60ch;
+  margin-top: 1.75rem;
+}
+
+.work-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.work-button {
+  display: inline-block;
+  font-size: 0.9375rem;
+  padding: 0.625rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.work-button:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.work-button.primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+
+.work-button.primary:hover {
+  background: transparent;
+  color: var(--accent);
+}
+
+.work-facts {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.work-facts dt {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+}
+
+.work-facts dd {
+  font-size: 0.9375rem;
+  color: var(--text-mid);
+  margin-top: 0.25rem;
+  line-height: 1.5;
+}
+
+
+/* --- Screenshots --- */
+.shot {
+  margin-top: 3rem;
+}
+
+.shot img {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+}
+
+body.light-mode .shot img {
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
+}
+
+.shot figcaption {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.01em;
+  margin-top: 0.875rem;
+}
+
+
+/* --- Sections --- */
+.work-section {
+  margin-top: clamp(4rem, 9vw, 7rem);
+}
+
+.work-section .section-title {
+  margin-bottom: 1.5rem;
+}
+
+.work-prose p {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--text-mid);
+  max-width: 62ch;
+}
+
+.work-prose p + p {
+  margin-top: 1rem;
+}
+
+
+/* --- Why it's useful --- */
+.work-points {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem 3rem;
+}
+
+.work-points li {
+  border-top: 1px solid var(--border);
+  padding-top: 1.25rem;
+}
+
+.work-points h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.work-points p {
+  font-size: 0.9375rem;
+  line-height: 1.7;
+  color: var(--text-mid);
+  margin-top: 0.5rem;
+}
+
+
+/* --- How it works --- */
+.work-steps {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(3rem, 7vw, 5rem);
+}
+
+.work-step {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.75fr);
+  gap: clamp(1.5rem, 4vw, 3.5rem);
+  align-items: center;
+}
+
+.work-step:nth-child(even) {
+  grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+}
+
+.work-step:nth-child(even) .work-step-text {
+  order: 2;
+}
+
+.work-step-number {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+}
+
+.work-step h3 {
+  font-size: 1.375rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-top: 0.375rem;
+}
+
+.work-step p {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-mid);
+  margin-top: 0.75rem;
+}
+
+.work-step .shot {
+  margin-top: 0;
+}
+
+
+/* --- Under the hood --- */
+.work-stack {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.75rem 2rem;
+  max-width: 62ch;
+}
+
+.work-stack dt {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-dim);
+  padding-top: 0.2rem;
+}
+
+.work-stack dd {
+  color: var(--text-mid);
+}
+
+
+/* --- Closing links --- */
+.work-end {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: clamp(4rem, 9vw, 7rem);
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border);
+}
+
+.work-end a {
+  color: var(--text-mid);
+  transition: color 0.2s ease;
+}
+
+.work-end a:hover {
+  color: var(--accent);
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .work {
+    padding-top: 5.5rem;
+  }
+
+  .work-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .work-points {
+    grid-template-columns: 1fr;
+  }
+
+  .work-step,
+  .work-step:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .work-step:nth-child(even) .work-step-text {
+    order: 0;
+  }
+
+  .work-stack {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .work-stack dd {
+    margin-bottom: 0.75rem;
+  }
+}
