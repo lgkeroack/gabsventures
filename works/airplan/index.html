@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Airplan — gabriel k&eacute;roack</title>
+  <meta name="description" content="Airplan: an airspace map for pilots. Click anywhere in Canada and see every layer of controlled and restricted airspace above it.">
+  <meta name="theme-color" content="#0e0e0e">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%97%86</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/work.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+
+  <nav class="nav" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home">gk</a>
+      <div class="nav-links">
+        <a href="https://apps.gabs.ventures">The Apps</a>
+        <a href="/#works">Works</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://dos.zone/microsoft-3d-pinball-space-cadet/" target="_blank" rel="noopener" class="consider-link">Consider the following</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">light</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="work">
+    <div class="container">
+
+      <a href="/#works" class="work-back">&larr; All works</a>
+
+      <header>
+        <span class="section-label">Works</span>
+        <h1 class="work-title">Airplan</h1>
+        <p class="work-tagline">Will I get in trouble for flying today?</p>
+        <p class="work-intro">An airspace map for pilots. Click anywhere and Airplan shows every layer of controlled and restricted airspace above that spot, from the ground up.</p>
+
+        <div class="work-actions">
+          <a href="https://airplan.ca" class="work-button primary" target="_blank" rel="noopener">Open Airplan &nearr;</a>
+          <a href="https://github.com/lgkeroack/Airplan2" class="work-button" target="_blank" rel="noopener">Source on GitHub &nearr;</a>
+        </div>
+
+        <dl class="work-facts">
+          <div>
+            <dt>Year</dt>
+            <dd>2026</dd>
+          </div>
+          <div>
+            <dt>Type</dt>
+            <dd>Web app</dd>
+          </div>
+          <div>
+            <dt>Built with</dt>
+            <dd>Next.js, Leaflet, Three.js</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Live</dd>
+          </div>
+        </dl>
+      </header>
+
+      <figure class="shot reveal">
+        <img src="/images/works/airplan/air-column.webp" width="2000" height="1250" alt="Airplan's topographic map of Squamish with airspace boundaries drawn over it, and a side panel stacking the Class C and Class B layers above the chosen point with their floors and ceilings in feet and metres.">
+        <figcaption>The air column above Squamish: Vancouver&rsquo;s Class C shelves, with Class B on top.</figcaption>
+      </figure>
+
+      <section class="work-section work-prose" aria-labelledby="what-heading">
+        <span class="section-label">What it is</span>
+        <h2 id="what-heading" class="section-title reveal">Airspace you can actually read</h2>
+        <p>Aeronautical charts pack airspace into flat lines and symbols, and the layers stack: a Class C shelf might begin 2,500 feet up, with another above it and another above that. For a paraglider or drone pilot the real question is simpler. Can I fly here, and how high?</p>
+        <p>Airplan draws Canada&rsquo;s airspace on a topographic map. Click a point and it lists every layer above it, with floors and ceilings in feet and metres, then shows the whole stack in 3D.</p>
+      </section>
+
+      <section class="work-section" aria-labelledby="why-heading">
+        <span class="section-label">Why it&rsquo;s useful</span>
+        <h2 id="why-heading" class="section-title reveal">The answer, not the chart</h2>
+        <ul class="work-points">
+          <li class="reveal">
+            <h3>One click, the whole column</h3>
+            <p>No decoding symbols or cross-referencing supplements. Tap the map and every layer above that point is listed in order.</p>
+          </li>
+          <li class="reveal">
+            <h3>Feet and metres side by side</h3>
+            <p>Airspace is defined in feet; free-flight pilots and drone operators often think in metres. Airplan labels every boundary in both.</p>
+          </li>
+          <li class="reveal">
+            <h3>Terrain in the picture</h3>
+            <p>The topographic base map puts airspace floors next to the mountains, which matters when launch is already 1,500&nbsp;m up.</p>
+          </li>
+          <li class="reveal">
+            <h3>Made for free flight</h3>
+            <p>Thermal overlays for soaring pilots, and <a href="/works/liftseeker/">Liftseeker</a> links straight to the airspace above each launch.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="work-section" aria-labelledby="how-heading">
+        <span class="section-label">How it works</span>
+        <h2 id="how-heading" class="section-title reveal">From a click to a flight plan</h2>
+        <ol class="work-steps">
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">01</span>
+              <h3>See the stack in 3D</h3>
+              <p>Each layer becomes a coloured cylinder at its real floor and ceiling, so it&rsquo;s obvious where the gaps are and how much room you have underneath.</p>
+            </div>
+            <figure class="shot portrait reveal">
+              <img src="/images/works/airplan/3d.webp" width="1000" height="1055" loading="lazy" alt="A 3D cylinder of stacked airspace: pink Class C layers from 762 to 3,810 metres and blue Class B above to 5,486 metres, with an altitude scale beside it.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">02</span>
+              <h3>Plan a route</h3>
+              <p>Draw a route, or import a GPX or KML track, and Airplan checks the airspace and terrain along a corridor on either side of it, with distance markers as you go.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/airplan/route.webp" width="1252" height="1140" loading="lazy" alt="A route drawn across Howe Sound towards Squamish with 5 km and 10 km markers, surrounded by a dashed green corridor over the topographic map.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">03</span>
+              <h3>Show only what matters</h3>
+              <p>Pick from fifteen base maps, add thermal overlays, and hide the airspace classes or altitude bands that don&rsquo;t apply to how you fly.</p>
+            </div>
+            <figure class="shot portrait reveal">
+              <img src="/images/works/airplan/layers.webp" width="808" height="1360" loading="lazy" alt="Airplan's map layers panel with a base map menu, toggles and opacity sliders for airspace restrictions, thermal skyways and thermal hotspots, and buttons for each airspace class.">
+            </figure>
+          </li>
+        </ol>
+      </section>
+
+      <section class="work-section" aria-labelledby="stack-heading">
+        <span class="section-label">Under the hood</span>
+        <h2 id="stack-heading" class="section-title reveal">How it&rsquo;s built</h2>
+        <dl class="work-stack reveal">
+          <dt>Map</dt>
+          <dd>Leaflet, on OpenTopoMap by default</dd>
+          <dt>3D</dt>
+          <dd>Three.js through React Three Fiber</dd>
+          <dt>Airspace</dt>
+          <dd>OpenAir definitions parsed into polygons, with a point-in-polygon lookup for every click</dd>
+          <dt>Framework</dt>
+          <dd>Next.js, hosted on Vercel</dd>
+        </dl>
+      </section>
+
+      <div class="work-end">
+        <a href="/#works">&larr; All works</a>
+        <a href="https://airplan.ca" target="_blank" rel="noopener">Open Airplan &nearr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by hand. <a href="/privacy.html">Privacy</a> <span id="weather-status"></span></p>
+      <p class="footer-legal">&copy; Gab's Ventures Limit&eacute;e. All rights reserved. This website and all associated works, content, and intellectual property are owned, protected, and operated by Gab's Ventures Limit&eacute;e. Unauthorized use, reproduction, or distribution of any materials on this site is strictly prohibited without prior written consent.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=9"></script>
+</body>
+</html>
