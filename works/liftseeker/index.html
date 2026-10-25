@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liftseeker — gabriel k&eacute;roack</title>
+  <meta name="description" content="Liftseeker: a daily ranking of Canadian paragliding sites, built from the soaring forecast for each one.">
+  <meta name="theme-color" content="#0e0e0e">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%97%86</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/work.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+
+  <nav class="nav" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home">gk</a>
+      <div class="nav-links">
+        <a href="https://apps.gabs.ventures">The Apps</a>
+        <a href="/#works">Works</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://dos.zone/microsoft-3d-pinball-space-cadet/" target="_blank" rel="noopener" class="consider-link">Consider the following</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">light</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="work">
+    <div class="container">
+
+      <a href="/#works" class="work-back">&larr; All works</a>
+
+      <header>
+        <span class="section-label">Works</span>
+        <h1 class="work-title">Liftseeker</h1>
+        <p class="work-tagline">Where should we fly today?</p>
+        <p class="work-intro">A daily ranking of paragliding sites across Canada. Liftseeker reads the soaring forecast for every site and puts the best flying at the top of the list.</p>
+
+        <div class="work-actions">
+          <a href="https://liftseeker.vercel.app" class="work-button primary" target="_blank" rel="noopener">Open Liftseeker &nearr;</a>
+        </div>
+
+        <dl class="work-facts">
+          <div>
+            <dt>Year</dt>
+            <dd>2025&ndash;26</dd>
+          </div>
+          <div>
+            <dt>Type</dt>
+            <dd>Web app</dd>
+          </div>
+          <div>
+            <dt>Built with</dt>
+            <dd>Next.js, TypeScript, Chart.js</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Live</dd>
+          </div>
+        </dl>
+      </header>
+
+      <figure class="shot reveal">
+        <img src="/images/works/liftseeker/rankings.webp" width="2000" height="1188" alt="Liftseeker's ranked list of British Columbia paragliding sites for today, led by Mt Thompson, Desous and Fernie, each with expected lift in metres per second, cloud cover and soaring height.">
+        <figcaption>Today&rsquo;s best sites in British Columbia, ranked by how consistent the lift is.</figcaption>
+      </figure>
+
+      <section class="work-section work-prose" aria-labelledby="what-heading">
+        <span class="section-label">What it is</span>
+        <h2 id="what-heading" class="section-title reveal">The morning forecast, already read</h2>
+        <p>Deciding where to fly usually means a dozen open tabs: windgrams, station reports and model forecasts, one site at a time. Liftseeker does that reading for you.</p>
+        <p>It covers 223 launch sites, from the Kootenays and the Sea to Sky to the Prairies and Quebec, and ranks them for today and tomorrow. Open any site to see its forecast, the wind at altitude and the windgram the ranking came from.</p>
+      </section>
+
+      <section class="work-section" aria-labelledby="why-heading">
+        <span class="section-label">Why it&rsquo;s useful</span>
+        <h2 id="why-heading" class="section-title reveal">Less research, more flying</h2>
+        <ul class="work-points">
+          <li class="reveal">
+            <h3>One list instead of a dozen tabs</h3>
+            <p>Every site&rsquo;s forecast is read and scored, so the decision starts with a ranking rather than a research project.</p>
+          </li>
+          <li class="reveal">
+            <h3>Ranked the way pilots think</h3>
+            <p>Sort by consistency (how strong the lift is, and for how long), by peak lift, or by how high you can expect to climb.</p>
+          </li>
+          <li class="reveal">
+            <h3>Its own five-day forecast</h3>
+            <p>A built-in soaring model works out thermal strength, thermal ceiling, maximum soarable height and cloud base, hour by hour, from Environment Canada&rsquo;s high-resolution model.</p>
+          </li>
+          <li class="reveal">
+            <h3>Tells you when it&rsquo;s on</h3>
+            <p>Star your sites and get a daily email when any of them meets the conditions you set. One more click opens <a href="/works/airplan/">Airplan</a> to check the airspace above launch.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="work-section" aria-labelledby="how-heading">
+        <span class="section-label">How it works</span>
+        <h2 id="how-heading" class="section-title reveal">From a picture to a ranking</h2>
+        <ol class="work-steps">
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">01</span>
+              <h3>Read the windgrams</h3>
+              <p>Each morning Liftseeker fetches every site&rsquo;s windgram from CanadaRASP and reads the image itself: it finds the scale, measures the lift band and the top of the boundary layer, and turns a picture into numbers it can rank.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/liftseeker/windgram.webp" width="2000" height="2050" loading="lazy" alt="A CanadaRASP windgram for Mt Thompson showing pressure, lift strength, cloud cover and colour-coded atmospheric stability by altitude through the day.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">02</span>
+              <h3>Model the day</h3>
+              <p>For a longer view, a soaring engine works through the atmosphere above each site from the model data and charts thermal strength against the ceiling and cloud base for the next five days.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/liftseeker/forecast.webp" width="2000" height="797" loading="lazy" alt="Liftseeker's hourly soaring forecast chart for Mt Thompson with day tabs, plotting thermal strength, thermal ceiling, maximum soarable height and cloud base.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">03</span>
+              <h3>Check the wind aloft</h3>
+              <p>Wind, temperature and cloud at launch and every 500&nbsp;m above it, for the hours that matter, so a strong day that&rsquo;s also a windy one doesn&rsquo;t catch you out.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/liftseeker/weather.webp" width="2000" height="653" loading="lazy" alt="A table of wind speed and temperature at ground level and 500, 1,000, 1,500 and 2,000 metres above it, at 9 am, noon, 3 pm and 6 pm.">
+            </figure>
+          </li>
+        </ol>
+      </section>
+
+      <section class="work-section" aria-labelledby="stack-heading">
+        <span class="section-label">Under the hood</span>
+        <h2 id="stack-heading" class="section-title reveal">How it&rsquo;s built</h2>
+        <dl class="work-stack reveal">
+          <dt>Front end</dt>
+          <dd>Next.js, TypeScript and Tailwind, with Chart.js for the forecasts</dd>
+          <dt>Forecasts</dt>
+          <dd>Environment Canada&rsquo;s HRDPS model, decoded from GRIB2, with Open-Meteo as a fallback; windgrams from CanadaRASP</dd>
+          <dt>Accounts</dt>
+          <dd>Google, Facebook or email sign-in, Postgres through Prisma, email alerts through Resend</dd>
+          <dt>Hosting</dt>
+          <dd>Vercel</dd>
+        </dl>
+      </section>
+
+      <div class="work-end">
+        <a href="/#works">&larr; All works</a>
+        <a href="https://liftseeker.vercel.app" target="_blank" rel="noopener">Open Liftseeker &nearr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by hand. <a href="/privacy.html">Privacy</a> <span id="weather-status"></span></p>
+      <p class="footer-legal">&copy; Gab's Ventures Limit&eacute;e. All rights reserved. This website and all associated works, content, and intellectual property are owned, protected, and operated by Gab's Ventures Limit&eacute;e. Unauthorized use, reproduction, or distribution of any materials on this site is strictly prohibited without prior written consent.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=9"></script>
+</body>
+</html>

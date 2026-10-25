@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Infograph — gabriel k&eacute;roack</title>
+  <meta name="description" content="Infograph: a small tool for picturing subsets of wholes by splitting and nesting rectangles, then exporting the result.">
+  <meta name="theme-color" content="#0e0e0e">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%97%86</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/work.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+
+  <nav class="nav" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home">gk</a>
+      <div class="nav-links">
+        <a href="https://apps.gabs.ventures">The Apps</a>
+        <a href="/#works">Works</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://dos.zone/microsoft-3d-pinball-space-cadet/" target="_blank" rel="noopener" class="consider-link">Consider the following</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">light</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="work">
+    <div class="container">
+
+      <a href="/#works" class="work-back">&larr; All works</a>
+
+      <header>
+        <span class="section-label">Works</span>
+        <h1 class="work-title">Infograph</h1>
+        <p class="work-tagline">A subset of a segment of a slice.</p>
+        <p class="work-intro">A small tool for picturing parts of a whole. Split a rectangle, nest one inside another, and label them until the picture matches what you mean.</p>
+
+        <div class="work-actions">
+          <a href="https://github.com/lgkeroack/infograph" class="work-button primary" target="_blank" rel="noopener">Source on GitHub &nearr;</a>
+        </div>
+
+        <dl class="work-facts">
+          <div>
+            <dt>Year</dt>
+            <dd>2026</dd>
+          </div>
+          <div>
+            <dt>Type</dt>
+            <dd>Web app</dd>
+          </div>
+          <div>
+            <dt>Built with</dt>
+            <dd>Next.js, React, Tailwind</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Prototype</dd>
+          </div>
+        </dl>
+      </header>
+
+      <figure class="shot reveal">
+        <img src="/images/works/infograph/chart.webp" width="2000" height="1200" alt="An Infograph chart of people who visit the site: a blue whole split in two, with a red subset labelled sign up nested in one half, and the other half split into on a phone and on a laptop, each labelled automatically.">
+        <figcaption>People who visit the site, split and nested, with every label written for you.</figcaption>
+      </figure>
+
+      <section class="work-section work-prose" aria-labelledby="what-heading">
+        <span class="section-label">What it is</span>
+        <h2 id="what-heading" class="section-title reveal">Who are we actually talking about?</h2>
+        <p>Conversations about users, customers or markets slide between groups without anyone noticing: everyone who visits, then the ones who sign up, then the ones who sign up on a phone. It&rsquo;s hard to keep track of which slice of which whole is under discussion.</p>
+        <p>Infograph makes the slices visible. Start with the whole, split it in two, nest a subset inside a part, and keep going. Each rectangle names itself from where it sits, so the picture always says what fraction of what you&rsquo;re looking at.</p>
+      </section>
+
+      <section class="work-section" aria-labelledby="why-heading">
+        <span class="section-label">Why it&rsquo;s useful</span>
+        <h2 id="why-heading" class="section-title reveal">A picture everyone can point at</h2>
+        <ul class="work-points">
+          <li class="reveal">
+            <h3>Labels that write themselves</h3>
+            <p>A split becomes &ldquo;a half of&rdquo; whatever it came from; type numbers and it switches to percentages. Nest a subset and the label follows it down.</p>
+          </li>
+          <li class="reveal">
+            <h3>Two moves, any shape</h3>
+            <p>Split divides a rectangle in two; subset nests a smaller one inside. Repeat up to six levels deep and the layout adapts to fit.</p>
+          </li>
+          <li class="reveal">
+            <h3>A table when you want one</h3>
+            <p>The data panel shows the same hierarchy as rows you can rename, split, merge or remove, for when it&rsquo;s faster to edit than to click.</p>
+          </li>
+          <li class="reveal">
+            <h3>Ready for the slide deck</h3>
+            <p>Export the chart as PNG, JPEG or SVG and drop it into the document where the discussion is happening.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="work-section" aria-labelledby="how-heading">
+        <span class="section-label">How it works</span>
+        <h2 id="how-heading" class="section-title reveal">From one rectangle to many</h2>
+        <ol class="work-steps">
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">01</span>
+              <h3>Start with the whole</h3>
+              <p>Every chart begins as one rectangle. Name it after the group you care about: people who visit the site, everyone in the room, all of last year&rsquo;s orders.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/infograph/whole.webp" width="2000" height="1344" loading="lazy" alt="Infograph's starting screen: a single blue rectangle labelled The Whole, with the title A subset of a segment of a slice above it and toolbar buttons at the side.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">02</span>
+              <h3>Split it, or nest a subset</h3>
+              <p>Tap any rectangle for its options. Split it to show two groups side by side, or add a subset to show a smaller group inside it. Type a label on the line in the middle.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/infograph/actions.webp" width="1200" height="760" loading="lazy" alt="A green rectangle labelled a portion of people who visit the site, with Split and Subset buttons showing after a tap.">
+            </figure>
+          </li>
+        </ol>
+      </section>
+
+      <section class="work-section" aria-labelledby="stack-heading">
+        <span class="section-label">Under the hood</span>
+        <h2 id="stack-heading" class="section-title reveal">How it&rsquo;s built</h2>
+        <dl class="work-stack reveal">
+          <dt>Framework</dt>
+          <dd>Next.js and React, with the React Compiler on</dd>
+          <dt>Layout</dt>
+          <dd>A recursive tree of rectangles that measures itself and picks a horizontal or vertical split to suit its shape</dd>
+          <dt>Styling</dt>
+          <dd>Tailwind CSS, with a sixteen-colour palette that keeps neighbours from matching</dd>
+          <dt>Export</dt>
+          <dd>html-to-image, at three times screen resolution for PNG and JPEG</dd>
+        </dl>
+      </section>
+
+      <div class="work-end">
+        <a href="/#works">&larr; All works</a>
+        <a href="https://github.com/lgkeroack/infograph" target="_blank" rel="noopener">Source on GitHub &nearr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by hand. <a href="/privacy.html">Privacy</a> <span id="weather-status"></span></p>
+      <p class="footer-legal">&copy; Gab's Ventures Limit&eacute;e. All rights reserved. This website and all associated works, content, and intellectual property are owned, protected, and operated by Gab's Ventures Limit&eacute;e. Unauthorized use, reproduction, or distribution of any materials on this site is strictly prohibited without prior written consent.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=9"></script>
+</body>
+</html>

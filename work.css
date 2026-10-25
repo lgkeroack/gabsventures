@@ -149,6 +149,20 @@ body.light-mode .shot img {
   margin-top: 1rem;
 }
 
+.work-prose p a,
+.work-points p a,
+.work-step p a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.work-prose p a:hover,
+.work-points p a:hover,
+.work-step p a:hover {
+  text-decoration: none;
+}
+
 
 /* --- Why it's useful --- */
 .work-points {
@@ -225,6 +239,74 @@ body.light-mode .shot img {
   margin-top: 0;
 }
 
+/* Tall, narrow screenshots (a side panel, a phone) shouldn't fill the column */
+.work-step .shot.portrait {
+  justify-self: center;
+  width: 100%;
+  max-width: 420px;
+}
+
+
+/* --- Flow diagram (for work that can't be screenshotted) --- */
+.work-flow {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2.5rem;
+  margin-top: 3rem;
+}
+
+.work-flow li {
+  position: relative;
+  background: var(--bg-raised);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem 1.25rem 1.5rem;
+}
+
+.work-flow li:not(:last-child)::after {
+  content: '\2192';
+  position: absolute;
+  top: 4.25rem;
+  right: -1.875rem;
+  font-family: var(--font-mono);
+  font-size: 1.125rem;
+  color: var(--accent);
+}
+
+.work-flow svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--text-mid);
+}
+
+.work-flow .accent {
+  color: var(--accent);
+}
+
+.work-flow h3 {
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-top: 1rem;
+}
+
+.work-flow p {
+  font-size: 0.875rem;
+  line-height: 1.6;
+  color: var(--text-mid);
+  margin-top: 0.375rem;
+}
+
+.work-flow-caption {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.01em;
+  margin-top: 0.875rem;
+}
+
 
 /* --- Under the hood --- */
 .work-stack {
@@ -281,6 +363,25 @@ body.light-mode .shot img {
 
   .work-points {
     grid-template-columns: 1fr;
+  }
+
+  .work-flow {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .work-flow li:not(:last-child)::after {
+    content: '\2193';
+    top: auto;
+    right: auto;
+    bottom: -1.875rem;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .work-flow svg {
+    max-width: 220px;
+    margin: 0 auto;
   }
 
   .work-step,

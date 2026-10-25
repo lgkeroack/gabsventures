@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ad Marginem — gabriel k&eacute;roack</title>
+  <meta name="description" content="Ad Marginem: a local-first research workspace for academic papers, with a PDF reader, notes, whiteboards and citations in one place.">
+  <meta name="theme-color" content="#0e0e0e">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%97%86</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/work.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+
+  <nav class="nav" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home">gk</a>
+      <div class="nav-links">
+        <a href="https://apps.gabs.ventures">The Apps</a>
+        <a href="/#works">Works</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://dos.zone/microsoft-3d-pinball-space-cadet/" target="_blank" rel="noopener" class="consider-link">Consider the following</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">light</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="work">
+    <div class="container">
+
+      <a href="/#works" class="work-back">&larr; All works</a>
+
+      <header>
+        <span class="section-label">Works</span>
+        <h1 class="work-title">Ad Marginem</h1>
+        <p class="work-tagline">What do I need to remember about this?</p>
+        <p class="work-intro">A research workspace for academic reading. Your papers, highlights, notes and citations live in one place, on your own device first, across desktop, web, iPad and Word.</p>
+
+        <div class="work-actions">
+          <a href="https://admarginem.ca" class="work-button primary" target="_blank" rel="noopener">Visit admarginem.ca &nearr;</a>
+        </div>
+
+        <dl class="work-facts">
+          <div>
+            <dt>Year</dt>
+            <dd>2026</dd>
+          </div>
+          <div>
+            <dt>Type</dt>
+            <dd>Desktop, web and iPad app</dd>
+          </div>
+          <div>
+            <dt>Built with</dt>
+            <dd>TypeScript, React, Tauri, SQLite</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Early access on Windows</dd>
+          </div>
+        </dl>
+      </header>
+
+      <figure class="shot reveal">
+        <img src="/images/works/ad-marginem/reader.webp" width="2000" height="1250" alt="Ad Marginem's reader showing the first page of Attention Is All You Need, with page and zoom controls above it, the library navigation on the left and the paper's title, authors and reading status on the right.">
+        <figcaption>The reader: the paper in the middle, everything you know about it beside it.</figcaption>
+      </figure>
+
+      <section class="work-section work-prose" aria-labelledby="what-heading">
+        <span class="section-label">What it is</span>
+        <h2 id="what-heading" class="section-title reveal">Marginalia first, then everything else</h2>
+        <p>Research reading is scattered: PDFs in one folder, highlights trapped inside them, notes in another app, citations in a third, and a Word document that has to pull it all together. The usual tools were built around the library. The thinking happens in the margins.</p>
+        <p>Ad Marginem starts from the margins. Read a paper, mark it up, write about it, and cite it, without the work ending up in four places. It keeps a full copy of your library on each device, works offline, and syncs when it can.</p>
+      </section>
+
+      <section class="work-section" aria-labelledby="why-heading">
+        <span class="section-label">Why it&rsquo;s useful</span>
+        <h2 id="why-heading" class="section-title reveal">From the PDF to the published paper</h2>
+        <ul class="work-points">
+          <li class="reveal">
+            <h3>Annotations that survive</h3>
+            <p>Highlights, underlines, sticky notes and pencil drawings stay with the paper and come out intact when you export it.</p>
+          </li>
+          <li class="reveal">
+            <h3>A library that fills itself in</h3>
+            <p>Drop in a PDF or paste a DOI and the title, authors and journal are filled out. The browser extension saves papers from publisher sites in one click.</p>
+          </li>
+          <li class="reveal">
+            <h3>Notes that know your library</h3>
+            <p>Write in Markdown or rich text, link straight to papers and other notes, and lay out the messier ideas on a whiteboard.</p>
+          </li>
+          <li class="reveal">
+            <h3>Citations without the busywork</h3>
+            <p>APA, MLA, Chicago, Harvard or IEEE, switchable for a whole document. The Word add-in inserts citations and keeps the bibliography up to date.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="work-section" aria-labelledby="how-heading">
+        <span class="section-label">How it works</span>
+        <h2 id="how-heading" class="section-title reveal">Collect, read, write</h2>
+        <ol class="work-steps">
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">01</span>
+              <h3>Build the library</h3>
+              <p>Import PDFs or add papers by DOI, from Shannon in 1948 to last week&rsquo;s preprint. Sort, filter, tag, and gather them into collections and saved searches.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/ad-marginem/library.webp" width="2000" height="958" loading="lazy" alt="The library in list view with seven papers, including Mastering the game of Go, A Mathematical Theory of Communication, Deep Residual Learning and Attention Is All You Need, each with its authors.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">02</span>
+              <h3>Write it down</h3>
+              <p>Notes sit next to the library, so a question about one paper can link straight to another. Everything stays searchable across the whole collection.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/ad-marginem/note.webp" width="2000" height="694" loading="lazy" alt="A note titled Reading notes: the Transformer, with a key idea, a list of questions, and a link to the paper Deep Residual Learning for Image Recognition.">
+            </figure>
+          </li>
+        </ol>
+      </section>
+
+      <section class="work-section" aria-labelledby="stack-heading">
+        <span class="section-label">Under the hood</span>
+        <h2 id="stack-heading" class="section-title reveal">How it&rsquo;s built</h2>
+        <dl class="work-stack reveal">
+          <dt>Apps</dt>
+          <dd>Tauri and React on the desktop, React Native on iPad, plus a browser extension and a Word add-in</dd>
+          <dt>Shared core</dt>
+          <dd>One TypeScript codebase for the models, citations and PDF reader, built on PDF.js</dd>
+          <dt>Storage</dt>
+          <dd>A full SQLite library on every device, with full-text search</dd>
+          <dt>Sync</dt>
+          <dd>An operation log relayed through Cloudflare Workers, so devices catch up without losing edits</dd>
+        </dl>
+      </section>
+
+      <div class="work-end">
+        <a href="/#works">&larr; All works</a>
+        <a href="https://admarginem.ca" target="_blank" rel="noopener">Visit admarginem.ca &nearr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by hand. <a href="/privacy.html">Privacy</a> <span id="weather-status"></span></p>
+      <p class="footer-legal">&copy; Gab's Ventures Limit&eacute;e. All rights reserved. This website and all associated works, content, and intellectual property are owned, protected, and operated by Gab's Ventures Limit&eacute;e. Unauthorized use, reproduction, or distribution of any materials on this site is strictly prohibited without prior written consent.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=9"></script>
+</body>
+</html>

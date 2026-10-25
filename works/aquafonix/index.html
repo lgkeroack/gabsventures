@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aquafonix — gabriel k&eacute;roack</title>
+  <meta name="description" content="Aquafonix: a portable real-time monitor for hydrophones that learns the sounds you name, measures calibrated underwater levels and picks out propellers.">
+  <meta name="theme-color" content="#0e0e0e">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%97%86</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/work.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+
+  <nav class="nav" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home">gk</a>
+      <div class="nav-links">
+        <a href="https://apps.gabs.ventures">The Apps</a>
+        <a href="/#works">Works</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://dos.zone/microsoft-3d-pinball-space-cadet/" target="_blank" rel="noopener" class="consider-link">Consider the following</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">light</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="work">
+    <div class="container">
+
+      <a href="/#works" class="work-back">&larr; All works</a>
+
+      <header>
+        <span class="section-label">Works</span>
+        <h1 class="work-title">Aquafonix</h1>
+        <p class="work-tagline">What&rsquo;s my hydrophone picking up?</p>
+        <p class="work-intro">A portable desktop monitor for hydrophones. It watches the signal live or replays a whole deployment, flags the sounds you&rsquo;ve taught it, and measures everything in proper underwater-acoustics units.</p>
+
+        <div class="work-actions">
+          <a href="https://github.com/lgkeroack/aquafonix" class="work-button primary" target="_blank" rel="noopener">Source on GitHub &nearr;</a>
+        </div>
+
+        <dl class="work-facts">
+          <div>
+            <dt>Year</dt>
+            <dd>2026</dd>
+          </div>
+          <div>
+            <dt>Type</dt>
+            <dd>Windows desktop app</dd>
+          </div>
+          <div>
+            <dt>Built with</dt>
+            <dd>Python, Qt, NumPy</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Version 0.1</dd>
+          </div>
+        </dl>
+      </header>
+
+      <figure class="shot reveal">
+        <img src="/images/works/aquafonix/monitor.webp" width="2000" height="1333" alt="The Aquafonix main window replaying a one-minute recording: an overview strip of the whole file, a waveform and a spectrogram where three upsweep calls are boxed and labelled Suspected: upsweep call with scores of 0.97, 0.98 and 0.67, a levels-over-time chart, and a detections table listing each one with its time, band, SNR and status.">
+        <figcaption>Replaying a synthetic test recording: three calls flagged, a click left unidentified, a boat coming in on the right.</figcaption>
+      </figure>
+
+      <section class="work-section work-prose" aria-labelledby="what-heading">
+        <span class="section-label">What it is</span>
+        <h2 id="what-heading" class="section-title reveal">A listening station on a laptop</h2>
+        <p>Leave a hydrophone in the water and you come back to hours of hiss with a few seconds worth hearing buried somewhere in it. Aquafonix watches the signal as it arrives, or plays back a folder of recordings as one continuous timeline with clock times taken from the file names, and points you at the moments that matter.</p>
+        <p>It isn&rsquo;t only for audio. It takes any microphone or audio interface, WAV, FLAC and AIFF files, serial and network data streams, and even a graph drawn on screen by another program, whose line traces or spectrogram colours it reads back into numbers. Whatever comes in gets the same waveform, spectrogram, spectrum and levels, and the same toolkit on top.</p>
+      </section>
+
+      <section class="work-section" aria-labelledby="why-heading">
+        <span class="section-label">Why it&rsquo;s useful</span>
+        <h2 id="why-heading" class="section-title reveal">It learns what you&rsquo;re listening for</h2>
+        <ul class="work-points">
+          <li class="reveal">
+            <h3>A catalogue you teach</h3>
+            <p>There&rsquo;s no fixed library. Snip a sound and name it, and later occurrences are flagged <em>Suspected</em> with a score. Every confirm, correction or rejection teaches the catalogue, so false matches stop coming back.</p>
+          </li>
+          <li class="reveal">
+            <h3>Numbers you can report</h3>
+            <p>SPL, peak level and SEL, spectra with percentiles and every IEC third-octave band, calibrated to dB re 1&nbsp;&micro;Pa from the hydrophone&rsquo;s sensitivity or the file&rsquo;s own metadata. Batch mode turns a folder into CSV reports.</p>
+          </li>
+          <li class="reveal">
+            <h3>It hears boats</h3>
+            <p>DEMON analysis pulls a propeller&rsquo;s shaft and blade rates out of the cavitation noise. With a pair of hydrophones, every detection also gets a bearing, and a scrolling bearing-time display shows what&rsquo;s moving.</p>
+          </li>
+          <li class="reveal">
+            <h3>Ready for the rest of your kit</h3>
+            <p>Alerts on chosen sounds, levels or propellers can play a sound, pop up and save the moment. Detections and levels go out as JSON over UDP, TCP, a webhook or a file, and Raven selection tables go both ways.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="work-section" aria-labelledby="how-heading">
+        <span class="section-label">How it works</span>
+        <h2 id="how-heading" class="section-title reveal">Name it, let it listen, measure it</h2>
+        <ol class="work-steps">
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">01</span>
+              <h3>Name a sound</h3>
+              <p>Shift-drag around something on the spectrogram and press Identify. Give it a name, check the frequency band, and the snippet becomes a signature, saved as a tagged event too if you like.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/aquafonix/identify.webp" width="920" height="808" loading="lazy" alt="The Identify sound dialog: a spectrogram of a 0.7-second upsweep rising from about 1.5 to 3.4 kHz between two dashed band lines, named Upsweep call, with a band of 1300 to 3600 Hz, Match by Automatic, and Save, Listen and Cancel buttons.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">02</span>
+              <h3>Let it flag the rest</h3>
+              <p>Anything that rises above the tracked noise floor is boxed in time and frequency. Sounds that match a signature are flagged <em>Suspected</em> with a score, and the rest are listed as unidentified with their closest match, ready for you to confirm, correct or reject.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/aquafonix/flagged.webp" width="2000" height="1112" loading="lazy" alt="Waveform and spectrogram from 3 to 22 seconds: three upsweeps boxed and labelled Suspected: upsweep call with scores of 0.97, 0.98 and 0.67, a click at 15 seconds labelled Unidentified, and broadband boat noise building from about 16 seconds.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">03</span>
+              <h3>Measure it</h3>
+              <p>Select a stretch and Analyse it for levels, bandwidths, kurtosis, spectrum and third-octaves, all exportable to CSV. The DEMON tab finds the propeller: on the test boat here, a 3&nbsp;Hz shaft (180&nbsp;rpm) and a 12&nbsp;Hz blade rate, so about four blades.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/aquafonix/demon.webp" width="2000" height="578" loading="lazy" alt="The DEMON (propeller) tab of the analysis window: an envelope spectrum from 0 to 100 Hz with peaks at 3, 9, 12, 15 and 24 Hz, the 12 Hz blade rate marked, and the result line shaft 3.00 Hz (180 rpm), blade rate 11.99 Hz, about 4 blades.">
+            </figure>
+          </li>
+        </ol>
+      </section>
+
+      <section class="work-section" aria-labelledby="stack-heading">
+        <span class="section-label">Under the hood</span>
+        <h2 id="stack-heading" class="section-title reveal">How it&rsquo;s built</h2>
+        <dl class="work-stack reveal">
+          <dt>Interface</dt>
+          <dd>Qt through PySide6, with pyqtgraph for the plots</dd>
+          <dt>Analysis</dt>
+          <dd>NumPy: Welch spectra, IEC 61260-1 third-octave bands, GCC-PHAT bearings and DEMON</dd>
+          <dt>Inputs</dt>
+          <dd>sounddevice and soundfile for audio, pyserial for COM ports, mss for screen capture</dd>
+          <dt>Packaging</dt>
+          <dd>A single-file Windows exe built with PyInstaller and smoke-tested in GitHub Actions</dd>
+        </dl>
+      </section>
+
+      <div class="work-end">
+        <a href="/#works">&larr; All works</a>
+        <a href="https://github.com/lgkeroack/aquafonix" target="_blank" rel="noopener">Source on GitHub &nearr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by hand. <a href="/privacy.html">Privacy</a> <span id="weather-status"></span></p>
+      <p class="footer-legal">&copy; Gab's Ventures Limit&eacute;e. All rights reserved. This website and all associated works, content, and intellectual property are owned, protected, and operated by Gab's Ventures Limit&eacute;e. Unauthorized use, reproduction, or distribution of any materials on this site is strictly prohibited without prior written consent.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=9"></script>
+</body>
+</html>

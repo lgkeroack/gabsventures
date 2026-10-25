@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Violin Companion — gabriel k&eacute;roack</title>
+  <meta name="description" content="Violin Companion: a tuner, scale trainer, metronome and play-along game for violin and other bowed strings, in the browser and on Android.">
+  <meta name="theme-color" content="#0e0e0e">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%97%86</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/work.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+
+  <nav class="nav" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home">gk</a>
+      <div class="nav-links">
+        <a href="https://apps.gabs.ventures">The Apps</a>
+        <a href="/#works">Works</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://dos.zone/microsoft-3d-pinball-space-cadet/" target="_blank" rel="noopener" class="consider-link">Consider the following</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">light</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="work">
+    <div class="container">
+
+      <a href="/#works" class="work-back">&larr; All works</a>
+
+      <header>
+        <span class="section-label">Works</span>
+        <h1 class="work-title">Violin Companion</h1>
+        <p class="work-tagline">Am I in tune yet?</p>
+        <p class="work-intro">A practice app for violin and other bowed strings: a tuner, scales, a metronome, and a play-along game that listens while you play and scores every note.</p>
+
+        <div class="work-actions">
+          <a href="https://lgkeroack.github.io/violin/" class="work-button primary" target="_blank" rel="noopener">Open Violin Companion &nearr;</a>
+          <a href="https://github.com/lgkeroack/violin" class="work-button" target="_blank" rel="noopener">Source on GitHub &nearr;</a>
+        </div>
+
+        <dl class="work-facts">
+          <div>
+            <dt>Year</dt>
+            <dd>2026</dd>
+          </div>
+          <div>
+            <dt>Type</dt>
+            <dd>Web and Android app</dd>
+          </div>
+          <div>
+            <dt>Built with</dt>
+            <dd>JavaScript, Web Audio, Capacitor</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Live</dd>
+          </div>
+        </dl>
+      </header>
+
+      <figure class="shot reveal">
+        <img src="/images/works/violin-companion/song-play.webp" width="2000" height="1242" alt="Song Play running Fisher's Hornpipe: notes fly down a 3D highway towards four coloured string lines, each labelled with the finger to use, with score, streak and accuracy across the top.">
+        <figcaption>Song Play: notes fly toward you, colours are strings and numbers are fingers.</figcaption>
+      </figure>
+
+      <section class="work-section work-prose" aria-labelledby="what-heading">
+        <span class="section-label">What it is</span>
+        <h2 id="what-heading" class="section-title reveal">A practice room in a browser tab</h2>
+        <p>Practising a bowed instrument means juggling a tuner, a metronome, a scale book and sheet music, and you still can&rsquo;t hear yourself as well as you think. Violin Companion puts all of it in one app that listens through the microphone.</p>
+        <p>The Workstation tab has the tools: tuner, tuning presets, scales on a fingerboard, a scale trainer, a metronome and an audio mixer. The Song Play tab turns practice into a game, in the spirit of Rocksmith: pick a tune, play along, and see exactly which notes were sharp, flat, early or late.</p>
+      </section>
+
+      <section class="work-section" aria-labelledby="why-heading">
+        <span class="section-label">Why it&rsquo;s useful</span>
+        <h2 id="why-heading" class="section-title reveal">Honest feedback, every note</h2>
+        <ul class="work-points">
+          <li class="reveal">
+            <h3>It hears what you play</h3>
+            <p>Pitch detection runs live on the microphone, or on a wired headset, USB mic or audio interface, and grades each note for pitch and timing.</p>
+          </li>
+          <li class="reveal">
+            <h3>It grows with you</h3>
+            <p>Learn a Song starts each phrase with just its key notes and adds more as you play it accurately. Riff Repeater loops the hard bit and speeds it up once you&rsquo;ve got it.</p>
+          </li>
+          <li class="reveal">
+            <h3>Hundreds of tunes, any instrument</h3>
+            <p>251 built-in songs across twelve genres, a live search of about 23,000 traditional tunes on The Session, and MIDI or ABC import. Every song is re-arranged for violin, viola, cello, bass or fiddle tunings.</p>
+          </li>
+          <li class="reveal">
+            <h3>Works anywhere</h3>
+            <p>Install it from the browser or as an Android app. It works offline after the first visit and updates itself.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="work-section" aria-labelledby="how-heading">
+        <span class="section-label">How it works</span>
+        <h2 id="how-heading" class="section-title reveal">Tune, warm up, play</h2>
+        <ol class="work-steps">
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">01</span>
+              <h3>Tune up</h3>
+              <p>Play a string and the tuner shows the note, the frequency and how many cents you&rsquo;re off, and highlights the string you&rsquo;re closest to. Thirteen presets run from violin and cello to fiddle cross-tunings, the Hardanger fiddle and the erhu.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/violin-companion/tuner.webp" width="2000" height="664" loading="lazy" alt="The tuner reading A4 at 437 Hz, 11.8 cents flat, above four string cards for G, D, A and E with the A string highlighted and an arrow showing which way to tune.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">02</span>
+              <h3>See the scale</h3>
+              <p>Choose a key and one of sixteen scales and the fingerboard lights up every note in it, with the root marked and the note you&rsquo;re playing shown live. The scale trainer then checks you through it, note by note.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/violin-companion/fingerboard.webp" width="2000" height="468" loading="lazy" alt="A fingerboard grid for the G, D, A and E strings with the notes of G major shaded, the roots outlined and the open A string lit green.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">03</span>
+              <h3>Pick a song</h3>
+              <p>Browse by genre and level, see each song&rsquo;s difficulty, tempo, key and positions, then choose how to play it: learn it, chase a high score, or loop the hardest phrases.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/violin-companion/library.webp" width="2000" height="953" loading="lazy" alt="The song library filtered to Celtic tunes, with Fisher's Hornpipe selected and its details beside it: difficulty 3.5 out of 10, 216 notes, 100 bpm in F, plus Learn a Song, Score Attack and Riff Repeater options.">
+            </figure>
+          </li>
+        </ol>
+      </section>
+
+      <section class="work-section" aria-labelledby="stack-heading">
+        <span class="section-label">Under the hood</span>
+        <h2 id="stack-heading" class="section-title reveal">How it&rsquo;s built</h2>
+        <dl class="work-stack reveal">
+          <dt>Audio</dt>
+          <dd>Web Audio, with the YIN algorithm for pitch detection</dd>
+          <dt>Songs</dt>
+          <dd>ABC notation and MIDI, arranged for each instrument by dynamic programming</dd>
+          <dt>App</dt>
+          <dd>Plain JavaScript built with Vite, installable as a PWA</dd>
+          <dt>Android</dt>
+          <dd>Capacitor, with over-the-air updates published from GitHub</dd>
+        </dl>
+      </section>
+
+      <div class="work-end">
+        <a href="/#works">&larr; All works</a>
+        <a href="https://lgkeroack.github.io/violin/" target="_blank" rel="noopener">Open Violin Companion &nearr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by hand. <a href="/privacy.html">Privacy</a> <span id="weather-status"></span></p>
+      <p class="footer-legal">&copy; Gab's Ventures Limit&eacute;e. All rights reserved. This website and all associated works, content, and intellectual property are owned, protected, and operated by Gab's Ventures Limit&eacute;e. Unauthorized use, reproduction, or distribution of any materials on this site is strictly prohibited without prior written consent.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=9"></script>
+</body>
+</html>

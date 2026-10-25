@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Highway 99 — gabriel k&eacute;roack</title>
+  <meta name="description" content="Highway 99: live drive times, cameras, DriveBC warnings and driver reports for the Sea to Sky Highway, from Vancouver to Pemberton, on one map.">
+  <meta name="theme-color" content="#0e0e0e">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%97%86</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/work.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+
+  <nav class="nav" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home">gk</a>
+      <div class="nav-links">
+        <a href="https://apps.gabs.ventures">The Apps</a>
+        <a href="/#works">Works</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://dos.zone/microsoft-3d-pinball-space-cadet/" target="_blank" rel="noopener" class="consider-link">Consider the following</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">light</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="work">
+    <div class="container">
+
+      <a href="/#works" class="work-back">&larr; All works</a>
+
+      <header>
+        <span class="section-label">Works</span>
+        <h1 class="work-title">Highway 99</h1>
+        <p class="work-tagline">Will I have a 99 day today?</p>
+        <p class="work-intro">A live dashboard for the Sea to Sky Highway. Drive times, highway cameras, DriveBC warnings and reports from other drivers, from Vancouver to Pemberton, on one map.</p>
+
+        <div class="work-actions">
+          <a href="https://highway99.info" class="work-button primary" target="_blank" rel="noopener">Open Highway 99 &nearr;</a>
+        </div>
+
+        <dl class="work-facts">
+          <div>
+            <dt>Year</dt>
+            <dd>2026</dd>
+          </div>
+          <div>
+            <dt>Type</dt>
+            <dd>Web app</dd>
+          </div>
+          <div>
+            <dt>Built with</dt>
+            <dd>React, TypeScript, Mapbox</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Live</dd>
+          </div>
+        </dl>
+      </header>
+
+      <figure class="shot reveal">
+        <img src="/images/works/highway99/dashboard.webp" width="2000" height="1250" alt="Highway 99's dashboard: a map of the Sea to Sky corridor with camera markers and 90 km/h speed signs, northbound drive times from Downtown Vancouver to Pemberton, a live camera at Squamish, and DriveBC warnings and community posts in the sidebar.">
+        <figcaption>The whole corridor at once: drive times, cameras, speed signs and warnings.</figcaption>
+      </figure>
+
+      <section class="work-section work-prose" aria-labelledby="what-heading">
+        <span class="section-label">What it is</span>
+        <h2 id="what-heading" class="section-title reveal">One road, everything about it</h2>
+        <p>Highway 99 is the only road between Vancouver, Squamish, Whistler and Pemberton. When it&rsquo;s clear, it&rsquo;s one of the best drives anywhere; when there&rsquo;s a crash, a closure or snow, there&rsquo;s no other way around. Finding out before you leave means checking DriveBC, the cameras, the weather and a Facebook group of locals, one tab at a time.</p>
+        <p>Highway 99 puts all of that on one map of the corridor. Every source refreshes every two minutes, so a glance tells you whether today is a good day to go, and when.</p>
+      </section>
+
+      <section class="work-section" aria-labelledby="why-heading">
+        <span class="section-label">Why it&rsquo;s useful</span>
+        <h2 id="why-heading" class="section-title reveal">Know before you&rsquo;re in the lineup</h2>
+        <ul class="work-points">
+          <li class="reveal">
+            <h3>Where the delay is, not just how long</h3>
+            <p>Live drive times for each leg, from Downtown Vancouver to Pemberton, each compared with a normal day, so you can see which stretch is slow and which direction is faster.</p>
+          </li>
+          <li class="reveal">
+            <h3>Plan around it</h3>
+            <p>Pick where you&rsquo;re starting and where you&rsquo;re going, then choose a time to depart or a time to arrive, and get the other end worked out from current traffic.</p>
+          </li>
+          <li class="reveal">
+            <h3>See it for yourself</h3>
+            <p>Twenty-two highway cameras are pinned to the map and listed by direction, along with the speeds currently posted on DriveBC&rsquo;s variable speed signs.</p>
+          </li>
+          <li class="reveal">
+            <h3>Hear it from other drivers</h3>
+            <p>DriveBC&rsquo;s official events sit next to posts from the Sea to Sky road conditions group. Places named in a post are picked out and can be shown on the map.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="work-section" aria-labelledby="how-heading">
+        <span class="section-label">How it works</span>
+        <h2 id="how-heading" class="section-title reveal">A glance before you go</h2>
+        <ol class="work-steps">
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">01</span>
+              <h3>Check the drive</h3>
+              <p>Drive times come from live traffic, leg by leg and colour-coded by how much slower than usual each one is. Flip between northbound and southbound, or open the planner for an arrival time.</p>
+            </div>
+            <figure class="shot portrait reveal">
+              <img src="/images/works/highway99/drive-times.webp" width="776" height="848" loading="lazy" alt="Northbound drive times from Downtown Vancouver through West Vancouver, Squamish and Whistler to Pemberton, marked Clear and 6 minutes faster than southbound, with the trip planner open showing a 2 hour 24 minute drive.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">02</span>
+              <h3>Look at the road</h3>
+              <p>Tap a camera on the map or in the list to see the latest image, from Lions Bay to Pemberton. A dotted line ties each one back to where it sits on the highway.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/highway99/camera.webp" width="956" height="512" loading="lazy" alt="The live highway camera at Squamish, Valley Drive, looking north at traffic flowing under a pedestrian bridge.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">03</span>
+              <h3>Read what&rsquo;s going on</h3>
+              <p>Construction, closures and incidents from DriveBC, marked by severity, then what drivers are reporting right now: a crash just past Lions Bay, a bear cub heading for the road.</p>
+            </div>
+            <figure class="shot portrait reveal">
+              <img src="/images/works/highway99/warnings.webp" width="956" height="1070" loading="lazy" alt="DriveBC warnings listing three construction events near Pemberton and Whistler, followed by community posts reporting accidents northbound, with Lions Bay highlighted as a location.">
+            </figure>
+          </li>
+        </ol>
+      </section>
+
+      <section class="work-section" aria-labelledby="stack-heading">
+        <span class="section-label">Under the hood</span>
+        <h2 id="stack-heading" class="section-title reveal">How it&rsquo;s built</h2>
+        <dl class="work-stack reveal">
+          <dt>Front end</dt>
+          <dd>React, TypeScript and Vite, with React Query and Zustand</dd>
+          <dt>Map</dt>
+          <dd>Mapbox GL with a custom live-traffic style, camera and speed-sign markers, and animated wind from Open-Meteo</dd>
+          <dt>Data</dt>
+          <dd>DriveBC&rsquo;s Open511 events and variable speed signs, highway cameras, Environment Canada weather warnings, Open-Meteo forecasts and Mapbox traffic-aware driving times</dd>
+          <dt>API</dt>
+          <dd>One Express function on Vercel that caches each source for a few minutes</dd>
+        </dl>
+      </section>
+
+      <div class="work-end">
+        <a href="/#works">&larr; All works</a>
+        <a href="https://highway99.info" target="_blank" rel="noopener">Open Highway 99 &nearr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by hand. <a href="/privacy.html">Privacy</a> <span id="weather-status"></span></p>
+      <p class="footer-legal">&copy; Gab's Ventures Limit&eacute;e. All rights reserved. This website and all associated works, content, and intellectual property are owned, protected, and operated by Gab's Ventures Limit&eacute;e. Unauthorized use, reproduction, or distribution of any materials on this site is strictly prohibited without prior written consent.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=9"></script>
+</body>
+</html>

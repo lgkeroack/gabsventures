@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>This Site — gabriel k&eacute;roack</title>
+  <meta name="description" content="gabs.ventures, the portfolio you&rsquo;re reading: hand-written HTML, CSS and JavaScript that draws Squamish&rsquo;s weather behind the text and the real night sky after dark.">
+  <meta name="theme-color" content="#0e0e0e">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%97%86</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap">
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/work.css">
+</head>
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+
+  <nav class="nav" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <a href="/" class="logo" aria-label="Home">gk</a>
+      <div class="nav-links">
+        <a href="https://apps.gabs.ventures">The Apps</a>
+        <a href="/#works">Works</a>
+        <a href="/#about">About</a>
+        <a href="/#contact">Contact</a>
+        <a href="https://dos.zone/microsoft-3d-pinball-space-cadet/" target="_blank" rel="noopener" class="consider-link">Consider the following</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle light mode">light</button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main" class="work">
+    <div class="container">
+
+      <a href="/#works" class="work-back">&larr; All works</a>
+
+      <header>
+        <span class="section-label">Works</span>
+        <h1 class="work-title">This Site</h1>
+        <p class="work-tagline">You&rsquo;re already here.</p>
+        <p class="work-intro">gabs.ventures, the portfolio you&rsquo;re reading. Before it draws itself, it looks out the window in Squamish: the rain, snow, cloud or sun behind the text is the real weather, and after dark the lights go down and the stars come out.</p>
+
+        <div class="work-actions">
+          <a href="/" class="work-button primary">Visit the home page &rarr;</a>
+          <a href="https://github.com/lgkeroack/gabsventures" class="work-button" target="_blank" rel="noopener">Source on GitHub &nearr;</a>
+        </div>
+
+        <dl class="work-facts">
+          <div>
+            <dt>Year</dt>
+            <dd>2026</dd>
+          </div>
+          <div>
+            <dt>Type</dt>
+            <dd>Website</dd>
+          </div>
+          <div>
+            <dt>Built with</dt>
+            <dd>HTML, CSS, vanilla JavaScript</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Live</dd>
+          </div>
+        </dl>
+      </header>
+
+      <figure class="shot reveal">
+        <img src="/images/works/this-site/rain.webp" width="2000" height="1250" alt="The gabs.ventures home page in dark mode, with thin streaks of rain falling across the heading &ldquo;gabriel k&eacute;roack&rsquo;s portfolio&rdquo; and the line &ldquo;made well.&rdquo;">
+        <figcaption>The home page when it&rsquo;s raining in Squamish, which is often.</figcaption>
+      </figure>
+
+      <section class="work-section work-prose" aria-labelledby="what-heading">
+        <span class="section-label">What it is</span>
+        <h2 id="what-heading" class="section-title reveal">A portfolio that checks the weather</h2>
+        <p>This is where my works live: a short list of projects, a few words about me and a way to get in touch. It&rsquo;s set in EB Garamond and written by hand in plain HTML, CSS and JavaScript, with no framework and no build step.</p>
+        <p>It also keeps an eye on the sky over Squamish, British Columbia. Whatever&rsquo;s happening outside plays out quietly behind the text, and the footer explains why: &ldquo;It&rsquo;s raining because it&rsquo;s raining.&rdquo; After sunset the site switches itself to dark mode, and on a clear night it draws the stars that are above Squamish at that minute.</p>
+      </section>
+
+      <section class="work-section" aria-labelledby="why-heading">
+        <span class="section-label">Why it&rsquo;s useful</span>
+        <h2 id="why-heading" class="section-title reveal">Quick to load, easy to read</h2>
+        <ul class="work-points">
+          <li class="reveal">
+            <h3>Nothing to wait for</h3>
+            <p>No framework, no bundle, no build step. Each page is plain HTML with its stylesheets, one script and one web font, so it loads quickly and anyone can see how it works with View Source.</p>
+          </li>
+          <li class="reveal">
+            <h3>Light or dark, your call</h3>
+            <p>Pick a theme with the switch in the corner and the site remembers it. Once the sun is down in Squamish it goes dark on its own, and the switch waits until sunrise.</p>
+          </li>
+          <li class="reveal">
+            <h3>Every project, explained</h3>
+            <p>Each work has a one-pager like this one: what it is, why it&rsquo;s useful, how it works with real screenshots, and what it&rsquo;s built with. <a href="/works/liftseeker/">Liftseeker</a> is a good place to start.</p>
+          </li>
+          <li class="reveal">
+            <h3>The apps, one address away</h3>
+            <p>The Apps lives at apps.gabs.ventures: a grid of app icons, one click to each tool that&rsquo;s live. It&rsquo;s served from this same site, so there&rsquo;s only one thing to keep up to date.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="work-section" aria-labelledby="how-heading">
+        <span class="section-label">How it works</span>
+        <h2 id="how-heading" class="section-title reveal">From a forecast to a sky</h2>
+        <ol class="work-steps">
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">01</span>
+              <h3>Look out the window</h3>
+              <p>When a page loads, it asks Open-Meteo for the current conditions in Squamish and today&rsquo;s sunrise and sunset. The answer is sorted into rain, snow, cloud or sun and kept in your browser for four hours, so the forecast isn&rsquo;t asked again on every click. The footer says what it found.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/this-site/snow.webp" width="2000" height="1250" loading="lazy" alt="The bottom of the home page in dark mode with snowflakes drifting over the contact links, and a footer that reads &ldquo;It&rsquo;s snowing because it&rsquo;s snowing.&rdquo;">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">02</span>
+              <h3>Paint the weather</h3>
+              <p>A canvas behind the text draws whatever it&rsquo;s doing outside: 200 raindrops that splash where they land, 150 snowflakes that wobble as they fall, half a dozen slow clouds made of soft, overlapping puffs, or a warm glow in the corner with faint rays and drifting motes. The colours shift to suit light or dark mode.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/this-site/clouds.webp" width="2000" height="1125" loading="lazy" alt="The home page in light mode on a cloudy day, with soft grey clouds drifting behind the heading.">
+            </figure>
+          </li>
+          <li class="work-step">
+            <div class="work-step-text">
+              <span class="work-step-number">03</span>
+              <h3>Turn out the lights</h3>
+              <p>Between sunset and sunrise the site goes dark. If the sky is clear, it works out where 91 of the brightest stars sit above Squamish at that moment and redraws them every minute: brighter stars are larger, the brightest glow, and all of them twinkle. The five naked-eye planets shine steadily, placed by a simplified orbit for each. On a wet or cloudy night you get the weather instead.</p>
+            </div>
+            <figure class="shot reveal">
+              <img src="/images/works/this-site/night.webp" width="2000" height="1125" loading="lazy" alt="The home page at night in forced dark mode, with scattered stars of different brightness behind the heading and the theme switch dimmed.">
+            </figure>
+          </li>
+        </ol>
+      </section>
+
+      <section class="work-section" aria-labelledby="stack-heading">
+        <span class="section-label">Under the hood</span>
+        <h2 id="stack-heading" class="section-title reveal">How it&rsquo;s built</h2>
+        <dl class="work-stack reveal">
+          <dt>Front end</dt>
+          <dd>Hand-written HTML, CSS and JavaScript, with no framework and no build step</dd>
+          <dt>Type</dt>
+          <dd>EB Garamond from Google Fonts</dd>
+          <dt>Weather</dt>
+          <dd>Open-Meteo&rsquo;s forecast for Squamish, drawn on canvas</dd>
+          <dt>Night sky</dt>
+          <dd>Star and planet positions worked out in the browser from a small catalogue and the time of day</dd>
+          <dt>Hosting</dt>
+          <dd>Vercel, with a small middleware that serves apps.gabs.ventures from the same project</dd>
+        </dl>
+      </section>
+
+      <div class="work-end">
+        <a href="/#works">&larr; All works</a>
+        <a href="https://github.com/lgkeroack/gabsventures" target="_blank" rel="noopener">Source on GitHub &nearr;</a>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>Built by hand. <a href="/privacy.html">Privacy</a> <span id="weather-status"></span></p>
+      <p class="footer-legal">&copy; Gab's Ventures Limit&eacute;e. All rights reserved. This website and all associated works, content, and intellectual property are owned, protected, and operated by Gab's Ventures Limit&eacute;e. Unauthorized use, reproduction, or distribution of any materials on this site is strictly prohibited without prior written consent.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js?v=9"></script>
+</body>
+</html>
